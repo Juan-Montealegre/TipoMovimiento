@@ -1,0 +1,35 @@
+@inherits LayoutComponentBase
+
+@* Layout principal con dos zonas:
+    - Sidebar con contexto del sistema.
+    - Workspace con cabecera y contenido de pagina (@Body). *@
+<div class="shell">
+    <aside class="sidebar">
+        <div class="brand-block">
+            <p class="brand-kicker">ZIUR PLATFORM</p>
+            <h2>Control Documental</h2>
+            <p class="brand-sub">Gestion de tipos de movimiento en un solo panel.</p>
+        </div>
+
+        <div class="side-meta">
+            <p class="meta-label">Ambiente</p>
+            <strong class="meta-value">Produccion</strong>
+            <p class="side-meta-sub">Conectado a API corporativa</p>
+        </div>
+    </aside>
+
+    <div class="workspace">
+        <header class="topbar">
+            <div>
+                <p class="topbar-kicker">Panel principal</p>
+                <h1>Panel de Tipos de Movimiento</h1>
+                <p class="topbar-sub">Consulta, filtra y actualiza informacion desde la API.</p>
+            </div>
+            <span class="status-pill">En linea</span>
+        </header>
+
+        <main class="surface">
+            @Body
+        </main>
+    </div>
+</div>

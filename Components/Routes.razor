@@ -1,0 +1,15 @@
+@* Router principal de la aplicacion:
+    - Resuelve rutas declaradas en paginas Razor.
+    - Aplica MainLayout por defecto.
+    - Muestra una vista simple cuando la ruta no existe. *@
+<Router AppAssembly="@typeof(Program).Assembly">
+    <Found Context="routeData">
+        <RouteView RouteData="@routeData" DefaultLayout="@typeof(Layout.MainLayout)" />
+        <FocusOnNavigate RouteData="@routeData" Selector="h1" />
+    </Found>
+    <NotFound>
+        <LayoutView Layout="@typeof(Layout.MainLayout)">
+            <p>No se encontró la página.</p>
+        </LayoutView>
+    </NotFound>
+</Router>
